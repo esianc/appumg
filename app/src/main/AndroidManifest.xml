@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="marco.umg.com.proyectochat">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ico"
+
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name="marco.umg.com.proyectochat.Activity.LoginActivity"
+            android:screenOrientation="fullSensor"
+            android:label="Proyecto Mensajería">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="marco.umg.com.proyectochat.Activity.MenuActivity"></activity>
+        <activity android:name="marco.umg.com.proyectochat.Activity.VerUsuariosActivity"></activity>
+        <activity android:name="marco.umg.com.proyectochat.Activity.RegistroActivity"></activity>
+        <activity android:name="marco.umg.com.proyectochat.Activity.MensajeriaActivity"></activity>
+        <activity android:name="marco.umg.com.proyectochat.Activity.MainActivity2"></activity>
+        <activity android:name="marco.umg.com.proyectochat.Activity.MiFirebaseInstanceIdService"></activity>
+        <activity android:name="marco.umg.com.proyectochat.Activity.MiFirebaseMessagingService"></activity>
+
+
+    <service android:name=".Activity.MiFirebaseMessagingService">
+        <intent-filter>
+            <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+        </intent-filter>
+    </service>
+        <service android:name=".Activity.MiFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
